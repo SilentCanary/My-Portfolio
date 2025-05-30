@@ -247,7 +247,7 @@ function animate_particles()
 document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
 
 async function get_messages() {
-    respose=await fetch('http://localhost:3000/get_messages');
+    respose=await fetch('https://silentcanary-github-io.onrender.com/get_messages');
     const data=await respose.json();
     const container=document.getElementById('notes-container');
     container.innerHTML=' ';
@@ -268,7 +268,7 @@ async function handle_submit(ev)
     const email=document.getElementById('email').value;
     const message=document.getElementById('message').value;
 
-    const respose=await fetch('http://localhost:3000/submit',{
+    const respose=await fetch('https://silentcanary-github-io.onrender.com/submit',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({name,email,message})
