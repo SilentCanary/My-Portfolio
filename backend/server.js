@@ -8,8 +8,6 @@ const app=express();
 app.use(cors());
 app.use(body_parser.json());
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
-
 const MONGOOSE_URI=process.env.MONGO_URI;
 
 const PORT=3000;
