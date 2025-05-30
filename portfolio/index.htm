@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div id="canvas-container">
+    </div>
+    <div class="main_container" id="home">
+        <nav class="navbar">
+            <a href="#home" class="nav-item">🏠 Home</a>
+            <a href="#about" class="nav-item">✨ About</a>
+            <a href="#projects" class="nav-item">🔮 Projects</a>
+            <a href="#contact" class="nav-item">📜 Connect</a>
+        </nav>
+        <div id="name_reveal"></div>
+        <div class="portal_gate box hidden">
+            <p class="heading1">Welcome To My Realm</p>
+            <p>Where Magic Meets Technology</p>
+            <button class="magical_btn btn" id="enter_btn">Enter The Portal</button>
+        </div>
+    </div>
+    <div class="aboutbox hidden" id="about">
+        <img class="profilepic" src="logos/profile pic.png">
+        <div class="about box">
+            <p class="heading1 heading2">About the Wizard</p>
+            <p>I’m a curious tech wizard who sees technology as a vast, magical cosmos — full of wonders waiting to be explored. From crafting web spells and ML charms to decoding the mysteries of low-level programming, I love diving into every part of it. Always open to discover more and would love to connect with fellow explorers of this infinite realm!</p>
+            <br>
+            <p>Realms stepped into so far :</p>
+            <ul>
+                        <li>🌟 Frontend Development : HTML, CSS ,JavaScript , React</li>
+                        <li>⚡ Backend Development : Node.js, Python, PHP</li>
+                        <li>🔮 C/C++ and Data Structures and Algorithms</li>
+                        <li>✨ Machine Learning and LLMs</li>
+            </ul>
+        </div>
+    </div>
+    <div id="projects">
+        <p class="heading1 hidden">Projects</p>
+        <div class="projects box hidden">
+            <div class="project hidden">
+                <p class="projectname">Jetpack Joyride</p>
+                <p>This is a pure C++ game application that uses SFML for the graphics and user interaction. It uses Quad Tree for efficient collision detection by spatially partitioning game objects, a queue to manage power-ups and their activation sequence, and a BST to maintain the leaderboard efficiently. It also employs OOP principles for organized design, handling enemy and player logic through separate classes. It uses inheritance in the power-up class hierarchy to manage various power-ups efficiently.</p>
+            </div>
+            <div class="project hidden">
+                <p class="projectname">Civic IQ Verifier</p>
+                <p>Developed an automated identity verification system for Aadhaar and PAN cards using YOLOv8 for object detection, Tesseract OCR, Real-ESRGAN, and face recognition. The system extracts structured fields from documents, decodes secure QR codes, and performs face matching with live selfies. Enhanced QR code quality using Real-ESRGAN and custom deblurring techniques. Integrated DigiLocker mock responses for cross-verification of OCR data. Designed as an easily integrable
+                Python package for automated document verification workflows. Future plans include expanding document support and improving
+                security features.</p>
+            </div>
+            <div class="project hidden">
+                <p class="projectname">Instagram ChatBot</p>
+                <p>Developed an automated Instagram chat bot using Puppeteer and Node.js to detect and respond to messages. The bot identifies unread messages, filters abusive language, and replies with predefined responses. Incorporated a Hugging Face model (Mistral-7B-Instruct) fine-tuned using PEFT on personal WhatsApp chat data to generate Hinglish-style responses that reflect my conversational tone.</p>
+            </div>
+            <div class="project hidden">
+                <p class="projectname">CodeAct-Style SQL Agent</p>
+                <p>reasoning agent built in Python that uses Mistral-7B-Instruct via the Hugging Face API to convert natural language questions into executable SQL queries. Follows the CodeAct and ReAct approach to reason step-by-step, generate Python code dynamically, execute it on a SQLite database, and refine queries through iterative self-correction.</p>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="contact-form box hidden">
+            <p class="heading1 heading2">Send a Magical Message</p>
+             <form id="contactForm" onsubmit="handle_submit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Cast Message Spell</button>
+                </form>
+                <div class="notes-section">
+                    <h3 class='heading2 heading1' style="font-size: 20px;">Messages from Fellow Travelers</h3>
+                    <div id="notes-container">
+                    </div>
+                </div>
+        </div>
+        <div class="socialbox box hidden">
+            <ul class="sociallist">
+                <li class="heading1 heading2">Connect With Me</li>
+                <li><img src="logos/home.svg" width="30px"><a href="#home" style="text-decoration:none ;color:inherit ;">Home</a></li>
+                <li><img src="logos/github.svg" width="30px"><a href="https://github.com/SilentCanary" style="text-decoration:none ;color:inherit ;">Github</a></li>
+                <li><img src="logos/ig.svg"  width="30px"><a href="https://www.instagram.com/silent._.canary/" style="text-decoration:none ;color:inherit ;">Instagram</a></li>
+                <li><img src="logos/linkedlin.svg" width="30px"><a href="www.linkedin.com/in/advitiya-prakash-19a1b9318" style="text-decoration:none ;color:inherit ;">Linkedlin</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
